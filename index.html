@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+        <script>
+    
+        function fbtm(tagList){
+            tagList.map(function(tag){
+                var script = document.createElement(element);
+                script.async = true;
+                script.type = 'text/javascript';
+                script.src = tag;
+                document.head.appendChild(script);
+            });
+            
+        };
+        
+        
+        const src = ["https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"]
+        fbtm(src);
+        
+    </script>
+    
+  </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
