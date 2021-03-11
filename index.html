@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <script>
+       <script>
     
-            window.onload = function fbtm(){
-                const tagList = ["https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"];
-                const json = '<!-- Load Facebook SDK for JavaScript --> <div id="fb-root"></div><script> window.fbAsyncInit = function(){FB.init({xfbml : true, version : "v10.0"});}; (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"; fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));<\/script><!-- Your Chat Plugin code --><div class="fb-customerchat" attribution="setup_tool" page_id="108570910913685"></div>';
-                tagList.map(function(tag){
-                  var script = document.createElement('script');
-                  var div = document.createElement('div');
-                  script.async = true;
-                  script.type = 'text/javascript';
-                  script.src = tag;
-                  document.head.appendChild(script);
-                  div.insertAdjacentHTML('afterbegin', json);
-                  document.body.appendChild(div);
-                });
-            };
-        
+        window.onload = function fbtm(){
+            const tagList = ["https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"];
+            const json = '<!-- Load Facebook SDK for JavaScript --> <div id="fb-root"></div><script> window.fbAsyncInit = function(){ FB.init({xfbml : true, version : \'v10.0\'});}; (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = \'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js\'; fjs.parentNode.insertBefore(js, fjs);}(document, \'script\', \'facebook-jssdk\'));<\/script><!-- Your Chat Plugin code --><div class="fb-customerchat" attribution="setup_tool" page_id="108570910913685"></div>';
+            tagList.map(function(tag){
+                var script = document.createElement('script');
+                var div = document.createElement('div');
+                script.async = true;
+                script.type = 'text/javascript';
+                script.src = tag;
+                document.head.appendChild(script);
+                div.insertAdjacentHTML('afterbegin', json);
+                document.body.appendChild(div);
+
+            });
+            
+        };
     </script>
+    
     
   </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
   
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-
-<button type="button" class="btn btn-primary">Primary</button>
  
   
 </body>
